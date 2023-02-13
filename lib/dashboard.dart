@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -14,38 +12,37 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffFCB495),
-      appBar: AppBar(
-        backgroundColor: const Color(0xffFCB495),
-        elevation: 0,
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 20),
-          child: Icon(
-            Icons.list_alt,
-            size: 35,
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: GestureDetector(
-              onTap: () {
-                log("fck");
-              },
-              child: const Icon(
-                Icons.shopping_cart,
-                size: 35,
-              ),
-            ),
-          ),
-        ],
-      ),
       body: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.menu_outlined,
+                    color: Colors.white,
+                    size: 35,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.shopping_bag_outlined,
+                    color: Colors.white,
+                    size: 35,
+                  ),
+                )
+              ],
+            ),
+          ),
           const SizedBox(
-            height: 40,
+            height: 25,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 25, right: 25),
+            padding: const EdgeInsets.only(left: 25, right: 25),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -68,6 +65,125 @@ class _DashboardState extends State<Dashboard> {
                 ),
               ),
             ),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "All",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Color(0xffA75A39)),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Sweets",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Color(0xffA75A39)),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Cakes",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Color(0xffA75A39)),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Candey",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Color(0xffA75A39)),
+                ),
+              ),
+            ],
+          ),
+          Stack(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 100),
+                height: 557,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(80),
+                      topRight: Radius.circular(80),
+                    ),
+                    color: Colors.white),
+              ),
+              Positioned(
+                top: 35,
+                left: 35,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 363,
+                      height: 152,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius: 1,
+                              blurRadius: 15),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 35,
+                    ),
+                    Container(
+                      width: 363,
+                      height: 152,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius: 1,
+                              blurRadius: 15),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 35,
+                    ),
+                    Container(
+                      width: 363,
+                      height: 152,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius: 1,
+                              blurRadius: 15),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
           )
         ],
       ),
