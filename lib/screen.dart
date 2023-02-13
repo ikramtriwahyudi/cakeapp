@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cakeapp/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class Screen extends StatefulWidget {
@@ -50,7 +51,10 @@ class _ScreenState extends State<Screen> {
               minWidth: 330,
               height: 50,
               color: const Color(0xffFCB495),
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => Dashboard())));
+              }),
               child: const Text(
                 "Get Started",
                 style: TextStyle(color: Colors.white, fontSize: 18),
