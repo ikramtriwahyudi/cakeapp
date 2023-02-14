@@ -145,9 +145,70 @@ class _DashboardState extends State<Dashboard> {
                               blurRadius: 15),
                         ],
                       ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Row(
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Cup Cake",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "Flavoured cupcakes with \nspecial icing",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "\$5",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Color(0xff5AA72B)),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 30,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Image.asset(
+                                  "assets/original 1.png",
+                                  scale: 1,
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Padding(
+                                  padding:
+                                      EdgeInsets.only(bottom: 90, left: 10),
+                                  child: Icon(
+                                    Icons.favorite_border_outlined,
+                                    color: Color(0xffFCB495),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    const SizedBox(
-                      height: 35,
+                    SizedBox(
+                      height: 30,
                     ),
                     Container(
                       width: 363,
@@ -162,9 +223,67 @@ class _DashboardState extends State<Dashboard> {
                               blurRadius: 15),
                         ],
                       ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Row(
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Donut",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "Flavoured cupcakes with \nspecial icing",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "\$3",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Color(0xff5AA72B)),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 13,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              // crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Image.asset(
+                                  "assets/original 2.png",
+                                  scale: 1,
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(bottom: 90, left: 7),
+                                  child: Icon(
+                                    Icons.favorite_border_outlined,
+                                    color: Color(0xffFCB495),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    const SizedBox(
-                      height: 35,
+                    SizedBox(
+                      height: 30,
                     ),
                     Container(
                       width: 363,
@@ -178,11 +297,73 @@ class _DashboardState extends State<Dashboard> {
                               spreadRadius: 1,
                               blurRadius: 15),
                         ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Row(
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Macaron",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "Flavoured cupcakes with \nspecial icing",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "\$6",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Color(0xff5AA72B)),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 11,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              // crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Image.asset(
+                                  "assets/original 3.png",
+                                  scale: 1.2,
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Padding(
+                                  padding:
+                                      EdgeInsets.only(bottom: 70, left: 10),
+                                  child: Icon(
+                                    Icons.favorite_border_outlined,
+                                    color: Color(0xffFCB495),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           )
         ],
