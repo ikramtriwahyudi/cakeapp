@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:cakeapp/dashboard.dart';
 import 'package:flutter/material.dart';
 
@@ -52,8 +50,12 @@ class _ScreenState extends State<Screen> {
               height: 50,
               color: const Color(0xffFCB495),
               onPressed: (() {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => Dashboard())));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) => const Dashboard()),
+                  ),
+                );
               }),
               child: const Text(
                 "Get Started",

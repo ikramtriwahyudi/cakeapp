@@ -7,6 +7,27 @@ class Dashboard extends StatefulWidget {
   State<Dashboard> createState() => _DashboardState();
 }
 
+List menu = [
+  {
+    "nama": "Cup Cake",
+    "desc": 'Flavoured cupcakes with \n special icing',
+    "harga": '\$ 5',
+    "image": 'assets/original 1.png',
+  },
+  {
+    "nama": "Donut",
+    "desc": 'Flavoured cupcakes with \n special icing',
+    "harga": '\$ 3',
+    "image": 'assets/original 2.png',
+  },
+  {
+    "nama": "Macaron",
+    "desc": 'Flavoured cupcakes with \n special icing',
+    "harga": '\$ 6',
+    "image": 'assets/original 3.png',
+  }
+];
+
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
@@ -163,7 +184,7 @@ class _DashboardState extends State<Dashboard> {
                                   height: 10,
                                 ),
                                 Text(
-                                  "Flavoured cupcakes with \nspecial icing",
+                                  "Flavoured cupcakes with \n special icing",
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold),
@@ -172,7 +193,7 @@ class _DashboardState extends State<Dashboard> {
                                   height: 10,
                                 ),
                                 Text(
-                                  "\$5",
+                                  "\$ 5",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -181,17 +202,18 @@ class _DashboardState extends State<Dashboard> {
                               ],
                             ),
                             const SizedBox(
-                              width: 30,
+                              width: 20,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(
                                   "assets/original 1.png",
-                                  scale: 1,
+                                  scale: 1.5,
                                 ),
                                 const SizedBox(
-                                  width: 5,
+                                  width: 10,
                                 ),
                                 const Padding(
                                   padding:
@@ -200,16 +222,107 @@ class _DashboardState extends State<Dashboard> {
                                     Icons.favorite_border_outlined,
                                     color: Color(0xffFCB495),
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 30,
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 35,
+                left: 35,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 363,
+                      height: 152,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius: 1,
+                              blurRadius: 15),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Row(
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Cup Cake",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "Flavoured cupcakes with \n special icing",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "\$ 5",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Color(0xff5AA72B)),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/original 1.png",
+                                  scale: 1.5,
+                                ),
+                                const SizedBox(
+                                  width: 30,
+                                ),
+                                const Padding(
+                                  padding:
+                                      EdgeInsets.only(bottom: 90, left: 10),
+                                  child: Icon(
+                                    Icons.favorite_border_outlined,
+                                    color: Color(0xffFCB495),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 215,
+                left: 35,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     Container(
                       width: 363,
                       height: 152,
@@ -241,7 +354,7 @@ class _DashboardState extends State<Dashboard> {
                                   height: 10,
                                 ),
                                 Text(
-                                  "Flavoured cupcakes with \nspecial icing",
+                                  "Flavoured cupcakes with \n special icing",
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold),
@@ -250,7 +363,7 @@ class _DashboardState extends State<Dashboard> {
                                   height: 10,
                                 ),
                                 Text(
-                                  "\$3",
+                                  "\$ 3",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -259,32 +372,42 @@ class _DashboardState extends State<Dashboard> {
                               ],
                             ),
                             const SizedBox(
-                              width: 13,
+                              width: 20,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              // crossAxisAlignment: CrossAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(
                                   "assets/original 2.png",
-                                  scale: 1,
+                                  scale: 1.5,
+                                ),
+                                const SizedBox(
+                                  width: 15,
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.only(bottom: 90, left: 7),
+                                  padding:
+                                      EdgeInsets.only(bottom: 90, left: 10),
                                   child: Icon(
                                     Icons.favorite_border_outlined,
                                     color: Color(0xffFCB495),
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 30,
-                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 395,
+                left: 35,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     Container(
                       width: 363,
                       height: 152,
@@ -316,7 +439,7 @@ class _DashboardState extends State<Dashboard> {
                                   height: 10,
                                 ),
                                 Text(
-                                  "Flavoured cupcakes with \nspecial icing",
+                                  "Flavoured cupcakes with \n special icing",
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold),
@@ -325,7 +448,7 @@ class _DashboardState extends State<Dashboard> {
                                   height: 10,
                                 ),
                                 Text(
-                                  "\$6",
+                                  "\$ 6",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -334,27 +457,27 @@ class _DashboardState extends State<Dashboard> {
                               ],
                             ),
                             const SizedBox(
-                              width: 11,
+                              width: 15,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              // crossAxisAlignment: CrossAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(
                                   "assets/original 3.png",
-                                  scale: 1.2,
+                                  scale: 1.5,
                                 ),
                                 const SizedBox(
-                                  width: 5,
+                                  width: 10,
                                 ),
                                 const Padding(
                                   padding:
-                                      EdgeInsets.only(bottom: 70, left: 10),
+                                      EdgeInsets.only(bottom: 90, left: 10),
                                   child: Icon(
                                     Icons.favorite_border_outlined,
                                     color: Color(0xffFCB495),
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ],
@@ -365,7 +488,7 @@ class _DashboardState extends State<Dashboard> {
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );
