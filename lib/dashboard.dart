@@ -1,3 +1,4 @@
+import 'package:cakeapp/listtile.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -94,7 +95,14 @@ class _DashboardState extends State<Dashboard> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Listtile(),
+                    ),
+                  );
+                },
                 child: const Text(
                   "All",
                   style: TextStyle(
