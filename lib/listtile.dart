@@ -12,33 +12,39 @@ class _ListtileState extends State<Listtile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("List tile"),
+        title: const Text("List tile"),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              for (int i = 0; i < 20; i++)
-                ListTile(
-                  leading: Icon(
-                    Icons.account_circle,
-                    size: 40,
-                  ),
-                  title: Text(
-                    "Ikram",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  subtitle: Text("Hello World "),
-                  trailing: Title(color: Colors.grey, child: Text("14.55")),
-                  isThreeLine: false,
-                  dense: true,
-                  shape: Border(
-                    bottom: BorderSide(width: 0.5),
-                  ),
-                )
-            ],
-          ),
-        ),
+      body: ListView(
+        children: [
+          for (int i = 0; i < 1; i++) const Chatitem(),
+          const Chatitem()
+        ],
+      ),
+    );
+  }
+}
+
+class Chatitem extends StatelessWidget {
+  const Chatitem({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: const CircleAvatar(
+        child: Icon(Icons.account_circle_rounded),
+      ),
+      title: const Text(
+        "Ikram",
+        style: TextStyle(fontSize: 18),
+      ),
+      subtitle: const Text("Hello World "),
+      trailing: Title(color: Colors.grey, child: const Text("14.55")),
+      isThreeLine: false,
+      dense: true,
+      shape: const Border(
+        bottom: BorderSide(width: 0.5),
       ),
     );
   }

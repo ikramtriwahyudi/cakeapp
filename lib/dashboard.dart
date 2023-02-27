@@ -1,3 +1,4 @@
+import 'package:cakeapp/deskripsi.dart';
 import 'package:cakeapp/listtile.dart';
 import 'package:flutter/material.dart';
 
@@ -99,7 +100,7 @@ class _DashboardState extends State<Dashboard> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Listtile(),
+                      builder: (context) => const Listtile(),
                     ),
                   );
                 },
@@ -143,359 +144,114 @@ class _DashboardState extends State<Dashboard> {
               ),
             ],
           ),
-          Stack(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(top: 100),
-                height: 557,
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(80),
-                      topRight: Radius.circular(80),
-                    ),
-                    color: Colors.white),
-              ),
-              Positioned(
-                top: 35,
-                left: 35,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 363,
-                      height: 152,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius: 1,
-                              blurRadius: 15),
-                        ],
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Deskripsi(),
+                  ));
+            },
+            child: Stack(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 100),
+                  height: 557,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(80),
+                        topRight: Radius.circular(80),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "Cup Cake",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "Flavoured cupcakes with \n special icing",
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "\$ 5",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                      color: Color(0xff5AA72B)),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/original 1.png",
-                                  scale: 1.5,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                const Padding(
-                                  padding:
-                                      EdgeInsets.only(bottom: 90, left: 10),
-                                  child: Icon(
-                                    Icons.favorite_border_outlined,
-                                    color: Color(0xffFCB495),
-                                  ),
-                                ),
-                              ],
-                            ),
+                      color: Colors.white),
+                ),
+                Positioned(
+                  top: 35,
+                  left: 35,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 363,
+                        height: 152,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.white,
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius: 1,
+                                blurRadius: 15),
                           ],
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 35,
-                left: 35,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 363,
-                      height: 152,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius: 1,
-                              blurRadius: 15),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "Cup Cake",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "Flavoured cupcakes with \n special icing",
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "\$ 5",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                      color: Color(0xff5AA72B)),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/original 1.png",
-                                  scale: 1.5,
-                                ),
-                                const SizedBox(
-                                  width: 30,
-                                ),
-                                const Padding(
-                                  padding:
-                                      EdgeInsets.only(bottom: 90, left: 10),
-                                  child: Icon(
-                                    Icons.favorite_border_outlined,
-                                    color: Color(0xffFCB495),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Cup Cake",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "Flavoured cupcakes with \n special icing",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "\$ 5",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        color: Color(0xff5AA72B)),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/original 1.png",
+                                    scale: 1.5,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.only(bottom: 90, left: 10),
+                                    child: Icon(
+                                      Icons.favorite_border_outlined,
+                                      color: Color(0xffFCB495),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Positioned(
-                top: 215,
-                left: 35,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 363,
-                      height: 152,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius: 1,
-                              blurRadius: 15),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "Donut",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "Flavoured cupcakes with \n special icing",
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "\$ 3",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                      color: Color(0xff5AA72B)),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/original 2.png",
-                                  scale: 1.5,
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                const Padding(
-                                  padding:
-                                      EdgeInsets.only(bottom: 90, left: 10),
-                                  child: Icon(
-                                    Icons.favorite_border_outlined,
-                                    color: Color(0xffFCB495),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 395,
-                left: 35,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 363,
-                      height: 152,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius: 1,
-                              blurRadius: 15),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "Macaron",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "Flavoured cupcakes with \n special icing",
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "\$ 6",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                      color: Color(0xff5AA72B)),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/original 3.png",
-                                  scale: 1.5,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                const Padding(
-                                  padding:
-                                      EdgeInsets.only(bottom: 90, left: 10),
-                                  child: Icon(
-                                    Icons.favorite_border_outlined,
-                                    color: Color(0xffFCB495),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
