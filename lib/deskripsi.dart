@@ -108,10 +108,15 @@ class _DeskripsiState extends State<Deskripsi> {
                         const SizedBox(
                           width: 140,
                         ),
-                        FloatingActionButton(
-                          backgroundColor: const Color(0xffFCB495),
-                          onPressed: decrement,
-                          child: const Icon(Icons.remove),
+                        Container(
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: const Color(0xffFCB495)),
+                          child: IconButton(
+                              onPressed: decrement,
+                              icon: const Icon(Icons.remove)),
                         ),
                         const SizedBox(
                           width: 10,
@@ -120,18 +125,22 @@ class _DeskripsiState extends State<Deskripsi> {
                         const SizedBox(
                           width: 10,
                         ),
-                        FloatingActionButton(
-                          backgroundColor: const Color(0xffFCB495),
-                          onPressed: increment,
-                          child: const Icon(Icons.add),
-                        ),
+                        Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: const Color(0xffFCB495)),
+                            child: IconButton(
+                                onPressed: increment,
+                                icon: const Icon(Icons.add)))
                       ],
                     ),
                     const SizedBox(
                       height: 50,
                     ),
                     Center(
-                      child: SizedBox(
+                      child: Container(
                         width: 352,
                         height: 75,
                         child: ElevatedButton(
