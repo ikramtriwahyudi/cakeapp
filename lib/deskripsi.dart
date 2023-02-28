@@ -9,6 +9,23 @@ class Deskripsi extends StatefulWidget {
 }
 
 class _DeskripsiState extends State<Deskripsi> {
+  int count = 0;
+
+  increment() {
+    setState(() {
+      count++;
+    });
+  }
+
+  decrement() {
+    if (count < 1) {
+      return;
+    }
+    setState(() {
+      count--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +44,6 @@ class _DeskripsiState extends State<Deskripsi> {
               padding: const EdgeInsets.all(10),
               child: Container(
                 width: 350,
-                height: 200,
                 color: Colors.white10,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -64,6 +80,71 @@ class _DeskripsiState extends State<Deskripsi> {
                         (rating);
                       },
                     ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Text(
+                      "About this product",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      "Flavoured cupcakes with special \nicing, Flavoured cupcakes.",
+                      style: TextStyle(),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.favorite_border_outlined,
+                          size: 65,
+                          color: Color(0xffFCB495),
+                        ),
+                        const SizedBox(
+                          width: 140,
+                        ),
+                        FloatingActionButton(
+                          backgroundColor: const Color(0xffFCB495),
+                          onPressed: decrement,
+                          child: const Icon(Icons.remove),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text("$count"),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        FloatingActionButton(
+                          backgroundColor: const Color(0xffFCB495),
+                          onPressed: increment,
+                          child: const Icon(Icons.add),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Center(
+                      child: SizedBox(
+                        width: 352,
+                        height: 75,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xff3F3D56)),
+                            onPressed: () {},
+                            child: const Text(
+                              "Buy Now ",
+                              style: TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                            )),
+                      ),
+                    )
                   ],
                 ),
               ),
