@@ -26,6 +26,8 @@ class _DeskripsiState extends State<Deskripsi> {
     });
   }
 
+  bool ubah = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,10 +102,19 @@ class _DeskripsiState extends State<Deskripsi> {
                     ),
                     Row(
                       children: [
-                        const Icon(
-                          Icons.favorite_border_outlined,
-                          size: 65,
-                          color: Color(0xffFCB495),
+                        TextButton(
+                          onPressed: () {
+                            setState(() {
+                              ubah = !ubah;
+                            });
+                          },
+                          child: Icon(
+                            (ubah == false)
+                                ? Icons.favorite_border_outlined
+                                : Icons.favorite,
+                            size: 50,
+                            color: Color(0xffFCB495),
+                          ),
                         ),
                         const SizedBox(
                           width: 140,

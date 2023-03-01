@@ -75,7 +75,7 @@ class _DashboardState extends State<Dashboard> {
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(25),
                   ),
                   hintText: "Search",
                   hintStyle: const TextStyle(
@@ -137,9 +137,10 @@ class _DashboardState extends State<Dashboard> {
                 child: const Text(
                   "Candey",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Color(0xffA75A39)),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Color(0xffA75A39),
+                  ),
                 ),
               ),
             ],
@@ -147,10 +148,11 @@ class _DashboardState extends State<Dashboard> {
           GestureDetector(
             onTap: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Deskripsi(),
-                  ));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Deskripsi(),
+                ),
+              );
             },
             child: Stack(
               children: [
@@ -170,6 +172,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      // for (int i = 0; i < 3; i++)
                       Container(
                         width: 363,
                         height: 152,
@@ -228,6 +231,166 @@ class _DashboardState extends State<Dashboard> {
                                 children: [
                                   Image.asset(
                                     "assets/original 1.png",
+                                    scale: 1.5,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.only(bottom: 90, left: 10),
+                                    child: Icon(
+                                      Icons.favorite_border_outlined,
+                                      color: Color(0xffFCB495),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        width: 363,
+                        height: 152,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.white,
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius: 1,
+                                blurRadius: 15),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Donut",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "Flavoured cupcakes with \n special icing",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "\$ 6",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        color: Color(0xff5AA72B)),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/original 2.png",
+                                    scale: 1.5,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.only(bottom: 90, left: 10),
+                                    child: Icon(
+                                      Icons.favorite_border_outlined,
+                                      color: Color(0xffFCB495),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        width: 363,
+                        height: 152,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.white,
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius: 1,
+                                blurRadius: 15),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Cookie",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "Flavoured cupcakes with \n special icing",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "\$ 4",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        color: Color(0xff5AA72B)),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/original 3.png",
                                     scale: 1.5,
                                   ),
                                   const SizedBox(
