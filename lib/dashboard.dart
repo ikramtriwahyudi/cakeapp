@@ -1,5 +1,5 @@
 import 'package:cakeapp/deskripsi.dart';
-import 'package:cakeapp/listtile.dart';
+
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -35,37 +35,57 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffFCB495),
+      appBar: AppBar(
+        backgroundColor: const Color(0xffFCB495),
+        elevation: 0,
+        leadingWidth: 90,
+        iconTheme: const IconThemeData(size: 35, color: Colors.white),
+
+        // leading: const Icon(
+        //   Icons.menu,
+        //   size: 35,
+        // ),
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: const [
+            UserAccountsDrawerHeader(
+              accountName: Text("Gojo Sensei"),
+              accountEmail: Text("Gojosatoru@gmail.com"),
+              currentAccountPicture: CircleAvatar(),
+            ),
+            // for (int i = 0; i < 5; i++)
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text("Home"),
+              subtitle: Text("This Home"),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.shopping_bag),
+              ),
+              title: Text("Shopping"),
+              subtitle: Text("This Shopping"),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.payment),
+              ),
+              title: Text("Pay"),
+              subtitle: Text("This Pay"),
+            )
+          ],
+        ),
+      ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.menu_outlined,
-                    color: Colors.white,
-                    size: 35,
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.shopping_bag_outlined,
-                    color: Colors.white,
-                    size: 35,
-                  ),
-                )
-              ],
-            ),
-          ),
           const SizedBox(
-            height: 25,
+            height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 25, right: 25),
+            padding: const EdgeInsets.only(left: 25, right: 25, top: 18),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -96,14 +116,7 @@ class _DashboardState extends State<Dashboard> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Listtile(),
-                    ),
-                  );
-                },
+                onPressed: () {},
                 child: const Text(
                   "All",
                   style: TextStyle(
@@ -172,243 +185,87 @@ class _DashboardState extends State<Dashboard> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // for (int i = 0; i < 3; i++)
-                      Container(
-                        width: 363,
-                        height: 152,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.white,
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                spreadRadius: 1,
-                                blurRadius: 15),
-                          ],
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: Row(
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  Text(
-                                    "Cup Cake",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "Flavoured cupcakes with \n special icing",
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "\$ 5",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                        color: Color(0xff5AA72B)),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/original 1.png",
-                                    scale: 1.5,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  const Padding(
-                                    padding:
-                                        EdgeInsets.only(bottom: 90, left: 10),
-                                    child: Icon(
-                                      Icons.favorite_border_outlined,
-                                      color: Color(0xffFCB495),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                      for (int i = 0; i < menu.length; i++)
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 20),
+                          width: 363,
+                          height: 152,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  spreadRadius: 1,
+                                  blurRadius: 15),
                             ],
                           ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      menu[i]["nama"],
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      menu[i]["desc"],
+                                      style: const TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      menu[i]["harga"],
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          color: Color(0xff5AA72B)),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      menu[i]["image"],
+                                      scale: 1.5,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Padding(
+                                      padding:
+                                          EdgeInsets.only(bottom: 90, left: 10),
+                                      child: Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Color(0xffFCB495),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                      ),
                       const SizedBox(
                         height: 20,
-                      ),
-                      Container(
-                        width: 363,
-                        height: 152,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.white,
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                spreadRadius: 1,
-                                blurRadius: 15),
-                          ],
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: Row(
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  Text(
-                                    "Donut",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "Flavoured cupcakes with \n special icing",
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "\$ 6",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                        color: Color(0xff5AA72B)),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/original 2.png",
-                                    scale: 1.5,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  const Padding(
-                                    padding:
-                                        EdgeInsets.only(bottom: 90, left: 10),
-                                    child: Icon(
-                                      Icons.favorite_border_outlined,
-                                      color: Color(0xffFCB495),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        width: 363,
-                        height: 152,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.white,
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                spreadRadius: 1,
-                                blurRadius: 15),
-                          ],
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: Row(
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  Text(
-                                    "Cookie",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "Flavoured cupcakes with \n special icing",
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "\$ 4",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                        color: Color(0xff5AA72B)),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/original 3.png",
-                                    scale: 1.5,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  const Padding(
-                                    padding:
-                                        EdgeInsets.only(bottom: 90, left: 10),
-                                    child: Icon(
-                                      Icons.favorite_border_outlined,
-                                      color: Color(0xffFCB495),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
                       ),
                     ],
                   ),

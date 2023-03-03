@@ -35,6 +35,7 @@ class _DeskripsiState extends State<Deskripsi> {
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         elevation: 0,
+        leadingWidth: 80,
       ),
       body: Column(
         children: [
@@ -109,11 +110,11 @@ class _DeskripsiState extends State<Deskripsi> {
                             });
                           },
                           child: Icon(
-                            (ubah == false)
+                            (ubah == true)
                                 ? Icons.favorite_border_outlined
                                 : Icons.favorite,
                             size: 50,
-                            color: Color(0xffFCB495),
+                            color: const Color(0xffFCB495),
                           ),
                         ),
                         const SizedBox(
@@ -151,7 +152,7 @@ class _DeskripsiState extends State<Deskripsi> {
                       height: 50,
                     ),
                     Center(
-                      child: Container(
+                      child: SizedBox(
                         width: 352,
                         height: 75,
                         child: ElevatedButton(
